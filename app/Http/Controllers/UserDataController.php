@@ -14,7 +14,7 @@ class UserDataController extends Controller
     {
         $userDatas = UserData::paginate(5);
         $categories = Category::all();
-        return view('welcome')
+        return view('userdatas')
             ->with('categories', $categories)
             ->with('userDatas', $userDatas);
     }
